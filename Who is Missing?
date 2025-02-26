@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+#include<set>
+int main(){
+     int n , m;
+     cin>>n >>m ;
+     set< int > se;
+     int a ;
+     for( int i = 0; i < m ; i++){
+        cin>>a ;
+        se.insert(a);
+     }
+     if( n == m ){
+        cout<<0;
+        return 0;
+     }
+     auto it = se.begin();
+     int nn = n ;
+     set< int > set2;
+     for( int i =1 ; i <= n ; i++){
+        if( i == *it){
+            it++;
+            nn--;
+            continue ;
+        }
+       set2.insert(i);
+     }
+     cout<<nn<<"\n";
+    auto its = set2.begin();
+    for( its; its != set2.end(); its++){
+        cout<<*its<<" ";
+    }
+}
+
