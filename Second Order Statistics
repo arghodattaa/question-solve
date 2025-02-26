@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+#include<set>
+int main(){
+    int n ; cin>>n ;
+    set< int >se;
+    int a;
+    for( int i =0; i<n ; i++){
+          cin>>a;
+          se.insert(a);
+    }
+    auto it = se.begin(), its = it;
+    its++;
+   bool chak = true;
+
+    while( its != se.end() && chak){
+        if( *its != *it){
+            cout<<*its;
+            chak = false;
+        }
+
+        its++;
+    }
+    if( chak ) cout<<"NO";
+
+}
