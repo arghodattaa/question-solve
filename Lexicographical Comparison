@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+int main(){
+   int a ; cin>>a ;
+   int arr1[a];
+   for( int i = 0; i< a ; i++){
+    cin>>arr1[i];
+   }
+
+   int b ; cin>> b ;
+   int arr2[b];
+   for( int i = 0; i< b ; i++){
+      cin >>arr2[i];
+   }
+   if( a < b ){
+     for( int i =0 ; i< a ; i++){
+        if( arr2[i] > arr1[i] )
+        {
+
+            cout <<1<<endl;
+            return 0;
+        }else if (arr2[i] < arr1[i]){
+               cout<<0<<endl;
+               return 0;
+        }
+     }
+     cout <<1<<endl;
+   } else if ( a> b){
+       for( int i =0 ; i< b ; i++){
+        if( arr2[i] > arr1[i] )
+        {
+
+            cout <<1<<endl;
+            return 0;
+        }else if (arr2[i] < arr1[i]){
+               cout<<0<<endl;
+               return 0;
+        }
+     }
+     cout << 0<<endl;
+   }
+   else {
+      for( int i =0 ; i< a ; i++){
+        if( arr2[i] > arr1[i] )
+        {
+
+            cout <<1<<endl;
+            return 0;
+        }else if (arr2[i] < arr1[i]){
+               cout<<0<<endl;
+               return 0;
+        }
+     }
+     cout<<0<<endl;
+   }
+}
